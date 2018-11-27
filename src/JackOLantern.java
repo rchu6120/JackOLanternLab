@@ -6,18 +6,26 @@ public class JackOLantern {
     }
 
     public void edit(String replace, int row, int column) {
-
+        faceFeatures[row][column] = replace;
     }
 
     public void fill(String str) {
-
-    }
-
-    public String toString() {
-        for(int i = 0; i < faceFeatures.length; i++) {
-            for(int j = 0; j < faceFeatures[i].length; j++) {
-                System.out.println(faceFeatures[i][j]);
+        for (int i = 0; i < faceFeatures.length; i++) {
+            for (int j = 0; j < faceFeatures[i].length; j++) {
+                faceFeatures[i][j] = str;
             }
         }
     }
+
+    public String toString() {
+        String result = "";
+        for (int i = 0; i < faceFeatures.length; i++) {
+            for (int j = 0; j < faceFeatures[i].length; j++) {
+                result = result + faceFeatures[i][j];
+            }
+            result = result + "\n";
+        }
+        return result;
+    }
 }
+
