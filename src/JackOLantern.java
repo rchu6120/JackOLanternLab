@@ -14,6 +14,10 @@ public class JackOLantern {
     }
 
     public String toString() {
-
+        for(int i = 0; i < faceFeatures.length; i++) {
+            for(int j = 0; j < faceFeatures[i].length; j++) {
+                System.out.println(faceFeatures[i][j]);
+            }
+        }
     }
 }
